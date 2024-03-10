@@ -9,6 +9,7 @@ import 'package:you_do/core/view/theme.dart';
 
 import 'app/loginPage.dart';
 import 'core/services/authenticator.dart';
+import 'core/services/router.dart';
 import 'core/view/widgets/loadingPage.dart';
 import 'core/view/widgets/windowbar.dart';
 
@@ -47,6 +48,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: theme,
       debugShowCheckedModeBanner: false,
+      onGenerateRoute: RouterGenerator.generateRoute,
       home: Platform.isWindows
           ? Scaffold(
               body: WindowBorder(
