@@ -5,7 +5,7 @@ import 'package:path/path.dart' as path;
 import 'package:path_provider/path_provider.dart';
 
 Future<void> writeJsonFile(String fileName, Map<String, dynamic> data) async {
-  final JsonEncoder encoderJson = new JsonEncoder.withIndent('  ');
+  const JsonEncoder encoderJson = JsonEncoder.withIndent('  ');
   try {
     final directory = Directory(path.join(
         (await getApplicationSupportDirectory()).path, 'localStorage'));
